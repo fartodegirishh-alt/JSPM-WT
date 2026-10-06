@@ -1,0 +1,716 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #1246a0;
+    --primary-dark: #082d6b;
+    --secondary: #f59e0b;
+    --dark: #111827;
+    --text: #4b5563;
+    --light: #f5f8ff;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title p,
+.small-title,
+.welcome {
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    color: var(--dark);
+    font-size: 38px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--white);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo h2 {
+    color: var(--primary);
+    font-size: 25px;
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #374151;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.admission-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.admission-btn:hover {
+    background: var(--primary-dark);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 25, 65, 0.95),
+            rgba(8, 50, 110, 0.75),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    width: 650px;
+    margin-left: 8%;
+    color: white;
+}
+
+.hero-content .welcome {
+    color: var(--secondary);
+}
+
+.hero h1 {
+    font-size: 70px;
+    line-height: 1.1;
+    margin: 5px 0;
+}
+
+.hero h1 span {
+    color: var(--secondary);
+}
+
+.hero h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.welcome) {
+    max-width: 570px;
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: #e5e7eb;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    padding: 13px 27px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary {
+    background: var(--secondary);
+    color: #111827;
+}
+
+.primary:hover {
+    background: #d97706;
+    color: white;
+}
+
+.secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.secondary:hover {
+    background: white;
+    color: var(--primary);
+}
+
+.white {
+    background: white;
+    color: var(--primary);
+}
+
+.white:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: white;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    min-height: 400px;
+}
+
+.image-placeholder {
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            rgba(18, 70, 160, 0.8),
+            rgba(8, 45, 105, 0.9)
+        ),
+        url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=900&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.image-placeholder span {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.about-content h3 {
+    font-size: 30px;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+}
+
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.stats h3 {
+    color: var(--primary);
+    font-size: 30px;
+    margin: 0;
+}
+
+.stats p {
+    font-size: 13px;
+}
+
+
+/* =========================
+   DEPARTMENTS
+========================= */
+
+.departments {
+    background: var(--light);
+}
+
+.department-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.department-card {
+    background: white;
+    padding: 35px 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.department-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(18, 70, 160, 0.15);
+}
+
+.icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.department-card h3 {
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.department-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.department-card a {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+/* =========================
+   FACILITIES
+========================= */
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.facility {
+    text-align: center;
+    padding: 35px 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.facility:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.facility-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.facility h3 {
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   PLACEMENTS
+========================= */
+
+.placement {
+    background: var(--primary);
+    color: white;
+}
+
+.placement-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.placement h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 15px 0 20px;
+}
+
+.placement p {
+    color: #dbeafe;
+    margin-bottom: 25px;
+}
+
+.placement-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.placement-stats div {
+    padding: 25px 15px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.placement-stats h3 {
+    color: var(--secondary);
+    font-size: 30px;
+}
+
+
+/* =========================
+   ADMISSION CTA
+========================= */
+
+.admission {
+    padding: 90px 8%;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(18, 70, 160, 0.93),
+            rgba(8, 45, 105, 0.95)
+        ),
+        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.admission h2 {
+    font-size: 42px;
+    margin: 10px 0 15px;
+}
+
+.admission p:not(:first-child) {
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: #f8fafc;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 60px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-item > span {
+    font-size: 30px;
+}
+
+.contact-item h3 {
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    font-size: 14px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary);
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #071a3a;
+    color: #cbd5e1;
+    padding: 60px 8% 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 40px;
+}
+
+.footer-content h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-content h2 span {
+    color: var(--secondary);
+}
+
+.footer-content h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-content a {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.footer-content a:hover {
+    color: var(--secondary);
+}
+
+.socials a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1000px) {
+
+    header {
+        padding: 0 4%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero-content {
+        margin-left: 5%;
+    }
+
+    .department-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .facility-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    header {
+        height: auto;
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .admission-btn {
+        display: none;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-content {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .about-container,
+    .placement-content,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .department-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facility-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .placement-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .facility-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .admission h2,
+    .placement h2 {
+        font-size: 32px;
+    }
+}
